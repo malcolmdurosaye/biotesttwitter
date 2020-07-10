@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
         body{
             background: black;
             margin:auto;
-            position: fixed;
+            max-width:100%
        
         }
         .container{
@@ -42,6 +43,17 @@
             animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
             font-family: Helvetica;
         }
+        #hover{
+            padding:20px;
+            display: none;
+            font-size: 1em;
+        }
+        span:hover + #hover{
+            display: block;
+        }
+        a:hover{
+            color:red;
+        }
         @keyframes advert{
             from {font-size: 20px; left: 0px; top: 0px;}
             to {font-size: 20px; left: 100%; top: 0px;}
@@ -62,7 +74,7 @@
                 color:white;
                 font-size: 1.063em;
                 padding:30px;
-                position: fixed;
+                position: relative;
             }
             
             #emoji{
@@ -78,7 +90,8 @@
         <p>Click the emoji. it's free.</p>
     </div>
     <div class= "container">
-    <p ><a id="emoji" href="https://www.youtube.com/channel/UCYOYSSYSY3rhGQy5C6fSqgg" target="_blank">&#128527</a></p>
+    <span><a id="emoji" href="https://www.youtube.com/channel/UCYOYSSYSY3rhGQy5C6fSqgg" target="_blank">&#128527</a></span>
+    <div id="hover">Check out my new YouTube channel</div>
     <p>Go back to <a id="link" href="https://www.twitter.com/malkohm" target="_blank">twitter</a> and retweet/like any of my tweets ASAP.</p>
     </div>
 </body>
